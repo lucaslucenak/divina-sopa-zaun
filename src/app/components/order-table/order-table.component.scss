@@ -1,0 +1,100 @@
+$primary-color: #6a1b9a; // Cor roxa principal
+$secondary-color: #00acc1; // Cor azul turquesa
+$background-color: #f8f9fa; // Cor de fundo suave
+
+.container-fluid {
+  padding: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+  color: #fff;
+  border-radius: 15px 15px 0 0;
+  padding: 20px;
+  text-align: center;
+  h6 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.card-body {
+  padding: 0;
+}
+
+.table {
+  width: 100%;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0 10px; // Espaçamento vertical entre as linhas da tabela
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  th, td {
+    border: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 150px;
+    color: $primary-color;
+    padding: 15px; // Espaçamento interno nas células da tabela
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra suave nas células da tabela
+    transition: all 0.3s ease; // Efeito de transição suave
+    &:last-child {
+      width: 50px;
+    }
+    .text-sm {
+      font-size: 0.875rem;
+    }
+    .badge {
+      border-radius: 12px;
+    }
+  }
+  tbody tr:hover {
+    background-color: $background-color; // Cor de fundo suave ao passar o mouse sobre as linhas
+  }
+}
+
+@media (max-width: 767px) {
+  .table {
+    thead {
+      display: none;
+    }
+    tbody {
+      display: block;
+      padding: 20px;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      tr {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .avatar {
+          margin-bottom: 10px;
+        }
+        td {
+          width: 100%;
+          max-width: none;
+          text-align: center;
+          &:last-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
