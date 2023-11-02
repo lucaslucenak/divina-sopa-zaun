@@ -1,8 +1,14 @@
 $primary-color: #6a1b9a; // Cor roxa principal
 $secondary-color: #00acc1; // Cor azul turquesa
 $background-color: #f8f9fa; // Cor de fundo suave
+$ordered-color: #00acc1;
+$preparing-color: #858d59;
+$dispached-color: #858d59;
+$finished-color: #66bb6a;
+$canceled-color: #f44336;
 $online-color: #66bb6a; // Cor para "Online" (verde)
 $offline-color: #f44336; // Cor para "Offline" (vermelho)
+
 .container-fluid {
   padding: 20px;
 }
@@ -78,13 +84,20 @@ $offline-color: #f44336; // Cor para "Offline" (vermelho)
     font-size: 0.875rem;
     text-align: center;
   }
-
-  .online {
-    background-color: $online-color;
+  .ordered {
+    background-color: $ordered-color;
   }
-
-  .offline {
-    background-color: $offline-color;
+  .preparing {
+    background-color: $preparing-color;
+  }
+  .dispached {
+    background-color: $dispached-color;
+  }
+  .finished {
+    background-color: $finished-color;
+  }
+  .canceled {
+    background-color: $canceled-color;
   }
 }
 
