@@ -1,7 +1,8 @@
 $primary-color: #6a1b9a; // Cor roxa principal
 $secondary-color: #00acc1; // Cor azul turquesa
 $background-color: #f8f9fa; // Cor de fundo suave
-
+$online-color: #66bb6a; // Cor para "Online" (verde)
+$offline-color: #f44336; // Cor para "Offline" (vermelho)
 .container-fluid {
   padding: 20px;
 }
@@ -39,6 +40,7 @@ $background-color: #f8f9fa; // Cor de fundo suave
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    margin-right: 10px; // Adiciona espaço à direita da imagem
   }
   th, td {
     border: none;
@@ -60,9 +62,29 @@ $background-color: #f8f9fa; // Cor de fundo suave
     .badge {
       border-radius: 12px;
     }
+    .d-flex {
+        .avatar {
+          margin-bottom: 10px; // Adiciona espaço abaixo da imagem
+        }
+      }
   }
   tbody tr:hover {
     background-color: $background-color; // Cor de fundo suave ao passar o mouse sobre as linhas
+  }
+  .status-badge {
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .online {
+    background-color: $online-color;
+  }
+
+  .offline {
+    background-color: $offline-color;
   }
 }
 
