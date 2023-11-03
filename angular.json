@@ -95,7 +95,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/bootstrap.min.js",
+              "stc/assets/jquery.min.js",
+              "src/assets/main.js",
+              "src/assets/popper.js"
+            ]
           }
         }
       }
