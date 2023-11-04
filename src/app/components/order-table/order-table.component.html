@@ -19,7 +19,8 @@
                 </thead>
                 <tbody>
                   
-                  <tr>
+
+                  <tr *ngFor="let item of dados | slice: (config.currentPage - 1) * config.itemsPerPage : (config.currentPage - 1) * config.itemsPerPage + config.itemsPerPage">
                     <td>
                       <div class="d-flex px-2 py-1">
                         <div>
@@ -46,117 +47,18 @@
                     </td>
                   </tr>
 
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img src="../../../assets/img/delivery-ld-contorno.png" class="avatar avatar-sm me-3" alt="user1">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm">#3652</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <p class="text-xs font-weight-bold mb-0">Lucas Lucena</p>
-                      <p class="text-xs text-secondary mb-0">(83) 98690 7270</p>
-                    </td>
-                    <td class="align-middle text-center">
-                      <span class="status-badge preparing">Preparando</span>
-                    </td>
-                    <td class="align-middle text-center">
-                      <span class="text-secondary text-xs font-weight-bold">16:15</span>
-                      <p class="text-xs text-secondary mb-0">02/11/2023</p>
-                    </td>
-                    <td class="align-middle">
-                      <p class="text-xs text-secondary mb-0">R$26,40</p>
-                    </td>
-                  </tr>
 
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img src="../../../assets/img/delivery-ld-contorno.png" class="avatar avatar-sm me-3" alt="user1">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm">#3652</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <p class="text-xs font-weight-bold mb-0">Lucas Lucena</p>
-                      <p class="text-xs text-secondary mb-0">(83) 98690 7270</p>
-                    </td>
-                    <td class="align-middle text-center">
-                      <span class="status-badge dispached">Despachado</span>
-                    </td>
-                    <td class="align-middle text-center">
-                      <span class="text-secondary text-xs font-weight-bold">16:15</span>
-                      <p class="text-xs text-secondary mb-0">02/11/2023</p>
-                    </td>
-                    <td class="align-middle">
-                      <p class="text-xs text-secondary mb-0">R$26,40</p>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img src="../../../assets/img/delivery-ld-contorno.png" class="avatar avatar-sm me-3" alt="user1">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm">#3652</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <p class="text-xs font-weight-bold mb-0">Lucas Lucena</p>
-                      <p class="text-xs text-secondary mb-0">(83) 98690 7270</p>
-                    </td>
-                    <td class="align-middle text-center">
-                      <span class="status-badge finished">Finalizado</span>
-                    </td>
-                    <td class="align-middle text-center">
-                      <span class="text-secondary text-xs font-weight-bold">16:15</span>
-                      <p class="text-xs text-secondary mb-0">02/11/2023</p>
-                    </td>
-                    <td class="align-middle">
-                      <p class="text-xs text-secondary mb-0">R$26,40</p>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img src="../../../assets/img/delivery-ld-contorno.png" class="avatar avatar-sm me-3" alt="user1">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm">#3652</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <p class="text-xs font-weight-bold mb-0">Lucas Lucena</p>
-                      <p class="text-xs text-secondary mb-0">(83) 98690 7270</p>
-                    </td>
-                    <td class="align-middle text-center">
-                      <span class="status-badge canceled">Cancelado</span>
-                    </td>
-                    <td class="align-middle text-center">
-                      <span class="text-secondary text-xs font-weight-bold">16:15</span>
-                      <p class="text-xs text-secondary mb-0">02/11/2023</p>
-                    </td>
-                    <td class="align-middle">
-                      <p class="text-xs text-secondary mb-0">R$26,40</p>
-                    </td>
-                  </tr>
                   
 
                 </tbody>
               </table>
+              <pagination-controls 
+              [(ngModel)]="config.currentPage"
+              previousLabel="Anterior"
+              nextLabel="Próximo"
+              boundaryLinks="true"
+              class="pagination"
+              ></pagination-controls>
             </div>
           </div>
         </div>
