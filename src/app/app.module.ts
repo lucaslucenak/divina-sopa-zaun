@@ -7,6 +7,8 @@ import {HttpClient} from "@angular/common/http";
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OrderTableComponent } from './components/order-table/order-table.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { OrderTableComponent } from './components/order-table/order-table.compon
     DeliveryComponent,
     FooterComponent,
     OrderTableComponent,
+    NavbarComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
