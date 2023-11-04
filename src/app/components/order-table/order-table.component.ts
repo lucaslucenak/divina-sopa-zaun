@@ -5,35 +5,40 @@ import { MatPaginator } from '@angular/material/paginator';
 export interface OrderModel {
   id: number;
   clientName: string;
+  clientCellphoneNumber: string;
+  orderStatus: string;
+  createdAt: Date;
 }
 
 const DATA: OrderModel[] = [
   {
     "id": 1,
-    "clientName": "aaaaaaaa"
+    "clientName": "aaaaaaaa",
+    "clientCellphoneNumber": "222-888-3333",
+    "orderStatus": "PREPARING",
+    "createdAt": new Date("2023-11-18T22:10:00")
   },
   {
     "id": 2,
-    "clientName": "bbbbbb"
+    "clientName": "bbbbbb",
+    "clientCellphoneNumber": "222-888-3333",
+    "orderStatus": "FINISHED",
+    "createdAt": new Date("2023-11-18T22:30:00")
   },
   {
     "id": 3,
-    "clientName": "cccccccc"
+    "clientName": "cccccccc",
+    "clientCellphoneNumber": "222-888-3333",
+    "orderStatus": "DISPATCHED",
+    "createdAt": new Date("2023-11-18T22:00:00")
   }
   ,
   {
     "id": 3,
-    "clientName": "cccccccc"
-  }
-  ,
-  {
-    "id": 3,
-    "clientName": "cccccccc"
-  }
-  ,
-  {
-    "id": 3,
-    "clientName": "cccccccc"
+    "clientName": "cccccccc",
+    "clientCellphoneNumber": "222-888-3333",
+    "orderStatus": "CANCELED",
+    "createdAt": new Date("2023-11-18T22:00:00")
   }
 ];
 
@@ -45,7 +50,7 @@ const DATA: OrderModel[] = [
 })
 export class OrderTableComponent implements AfterViewInit{
 
-  columns: string[] = ['id', 'clientName']
+  columns: string[] = ['id', 'clientName', 'orderStatus', 'createdAt'];
   dataSource = new MatTableDataSource(DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

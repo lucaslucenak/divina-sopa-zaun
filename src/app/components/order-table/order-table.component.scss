@@ -3,7 +3,7 @@ $secondary-color: #00acc1; // Cor azul turquesa
 $background-color: #f8f9fa; // Cor de fundo suave
 $ordered-color: #00acc1;
 $preparing-color: #858d59;
-$dispached-color: #858d59;
+$dispatched-color: #858d59;
 $finished-color: #66bb6a;
 $canceled-color: #f44336;
 $online-color: #66bb6a; // Cor para "Online" (verde)
@@ -90,8 +90,8 @@ $offline-color: #f44336; // Cor para "Offline" (vermelho)
   .preparing {
     background-color: $preparing-color;
   }
-  .dispached {
-    background-color: $dispached-color;
+  .dispatched {
+    background-color: $dispatched-color;
   }
   .finished {
     background-color: $finished-color;
