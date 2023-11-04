@@ -8,6 +8,7 @@ export interface OrderModel {
   clientCellphoneNumber: string;
   orderStatus: string;
   createdAt: Date;
+  orderPrice: number;
 }
 
 const DATA: OrderModel[] = [
@@ -16,21 +17,24 @@ const DATA: OrderModel[] = [
     "clientName": "aaaaaaaa",
     "clientCellphoneNumber": "222-888-3333",
     "orderStatus": "PREPARING",
-    "createdAt": new Date("2023-11-18T22:10:00")
+    "createdAt": new Date("2023-03-01T22:10:00"),
+    "orderPrice": 10.50
   },
   {
     "id": 2,
     "clientName": "bbbbbb",
     "clientCellphoneNumber": "222-888-3333",
     "orderStatus": "FINISHED",
-    "createdAt": new Date("2023-11-18T22:30:00")
+    "createdAt": new Date("2023-11-18T22:30:00"),
+    "orderPrice": 10.50
   },
   {
     "id": 3,
     "clientName": "cccccccc",
     "clientCellphoneNumber": "222-888-3333",
     "orderStatus": "DISPATCHED",
-    "createdAt": new Date("2023-11-18T22:00:00")
+    "createdAt": new Date("2023-11-18T22:03:00"),
+    "orderPrice": 10.50
   }
   ,
   {
@@ -38,7 +42,8 @@ const DATA: OrderModel[] = [
     "clientName": "cccccccc",
     "clientCellphoneNumber": "222-888-3333",
     "orderStatus": "CANCELED",
-    "createdAt": new Date("2023-11-18T22:00:00")
+    "createdAt": new Date("2023-11-18T22:00:00"),
+    "orderPrice": 10.50
   }
 ];
 
@@ -50,7 +55,7 @@ const DATA: OrderModel[] = [
 })
 export class OrderTableComponent implements AfterViewInit{
 
-  columns: string[] = ['id', 'clientName', 'orderStatus', 'createdAt'];
+  columns: string[] = ['id', 'clientName', 'orderStatus', 'createdAt', 'orderPrice'];
   dataSource = new MatTableDataSource(DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
