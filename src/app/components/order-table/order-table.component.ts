@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, Input } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 
@@ -13,35 +13,42 @@ export interface OrderModel {
 
 const DATA: OrderModel[] = [
   {
-    "id": 1,
-    "clientName": "aaaaaaaa",
-    "clientCellphoneNumber": "222-888-3333",
+    "id": 24543,
+    "clientName": "Lucas Lucena",
+    "clientCellphoneNumber": "(83) 98690 7270",
     "orderStatus": "PREPARING",
     "createdAt": new Date("2023-03-01T22:10:00"),
     "orderPrice": 10.50
   },
   {
-    "id": 2,
-    "clientName": "bbbbbb",
-    "clientCellphoneNumber": "222-888-3333",
+    "id": 24544,
+    "clientName": "Daniel Xavier",
+    "clientCellphoneNumber": "(83) 12345 6789",
     "orderStatus": "FINISHED",
     "createdAt": new Date("2023-11-18T22:30:00"),
-    "orderPrice": 10.50
+    "orderPrice": 40.53
   },
   {
     "id": 3,
-    "clientName": "cccccccc",
-    "clientCellphoneNumber": "222-888-3333",
+    "clientName": "Fernando Alves",
+    "clientCellphoneNumber": "(83) 32165 4879",
     "orderStatus": "DISPATCHED",
     "createdAt": new Date("2023-11-18T22:03:00"),
-    "orderPrice": 10.50
-  }
-  ,
+    "orderPrice": 100.54
+  },
   {
     "id": 3,
-    "clientName": "cccccccc",
-    "clientCellphoneNumber": "222-888-3333",
+    "clientName": "Mariluce Maria",
+    "clientCellphoneNumber": "(83) 94526 7846",
     "orderStatus": "CANCELED",
+    "createdAt": new Date("2023-11-18T22:00:00"),
+    "orderPrice": 10.50
+  },
+  {
+    "id": 4,
+    "clientName": "Fernanda Aguiar",
+    "clientCellphoneNumber": "(83) 54136 8784",
+    "orderStatus": "ORDERED",
     "createdAt": new Date("2023-11-18T22:00:00"),
     "orderPrice": 10.50
   }

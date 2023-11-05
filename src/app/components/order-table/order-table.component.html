@@ -8,8 +8,6 @@
           <div class="card-body px-0 pt-0 pb-2">
             <div class="table-responsive p-0">
               <table mat-table [dataSource]="dataSource" class="table align-items-center mb-0">
-
-
                 <!--Order Id-->
                 <ng-container matColumnDef="id">
                   <th mat-header-cell *matHeaderCellDef class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Id</th>
@@ -73,17 +71,6 @@
                 <tr mat-row *matRowDef="let row; columns: columns;"></tr>
               </table>
               <mat-paginator [pageSizeOptions]="[2,4,6,8,10]" showFirstLastButtons></mat-paginator>
-              <!--<table class="table align-items-center mb-0">
-                <thead>
-                  <tr>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Id</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Cliente</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Feito às</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Valor</th>
-                  </tr>
-                </thead>
-              </table>-->
             </div>
           </div>
         </div>
