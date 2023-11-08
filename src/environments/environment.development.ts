@@ -1,3 +1,3 @@
 export const environment = {
-    api: 'api host'
+    noxusUrl: 'http://localhost:8080'
 };
