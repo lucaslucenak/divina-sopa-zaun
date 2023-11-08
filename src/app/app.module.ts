@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { LoginComponent } from './pages/login/login.component';
+import { LayoutComponent } from './layouts/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoginComponent } from './pages/login/login.component';
     OrderTableComponent,
     SidebarComponent,
     LoginComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
