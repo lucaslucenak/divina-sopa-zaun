@@ -8,12 +8,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OrderTableComponent } from './components/order-table/order-table.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { LoginComponent } from './pages/login/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { LoginComponent } from './pages/login/login/login.component';
     DeliveryComponent,
     FooterComponent,
     OrderTableComponent,
-    NavbarComponent,
     SidebarComponent,
     LoginComponent,
   ],
