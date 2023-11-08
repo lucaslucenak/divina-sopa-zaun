@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
-import { OrderModel } from '../models/music.model';
+import { OrderModel } from '../models/order.model';
 
 @Injectable({
   providedIn: 'root'
