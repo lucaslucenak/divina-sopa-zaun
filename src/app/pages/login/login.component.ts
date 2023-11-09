@@ -1,5 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LoginDto } from 'src/app/models/dtos/login.dto';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -7,13 +11,19 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-
+  userLogin: LoginDto = {
+    "cpf": '',
+    "password": ''
+  };
+  
   momentForm!: FormGroup;
 
-  constructor() {}
+  constructor(private router: Router, private authenticationService: AuthenticationService) {}
 
-  submit() {
 
+  onSignIn() {
+    this.authenticationService.login(this.userLogin);
+    this.router.navigate(['delivery'])
   }
 
 }
