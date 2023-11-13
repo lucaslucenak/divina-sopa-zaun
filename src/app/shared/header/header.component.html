@@ -15,4 +15,14 @@
       <a href="#" >Açaí</a>
     </div>
   </div>
+  <div class="navbar-right">
+    <div class="search-icon" (click)="toggleSearch()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
+    </div>
+
+    <div class="search-bar" *ngIf="showSearchBar">
+      <input type="text" placeholder="Buscar no cardápio" [(ngModel)]="searchTerm" autofocus>
+      <button (click)="toggleSearch()">Cancelar</button>
+    </div>
+  </div>
 </nav>
