@@ -8,12 +8,16 @@ import { CaretoryListComponent } from './shared/caretory-list/caretory-list.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { ContainerComponent } from './shared/container/container.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CaretoryListComponent
+    CaretoryListComponent,
+    ContainerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
