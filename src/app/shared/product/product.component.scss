@@ -1,0 +1,53 @@
+.example-card {
+  border-bottom: 1px solid #ccc;
+}
+
+.example-card .mat-card-subtitle {
+  font-size: 1rem;
+}
+
+.container {
+  border-radius: 10px;
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .example-card .mat-card-subtitle {
+    font-size: 0.8rem;
+  }
+  .container {
+    height: 100px;
+
+    .image {
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    justify-content: flex-end;
+
+    .image {
+      max-width: 200px;
+    }
+  }
+}
+
+.example-card .mat-card-content {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+
+
