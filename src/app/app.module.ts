@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { ContainerComponent } from './shared/container/container.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ProductComponent } from './shared/product/product.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { HomeComponent } from './pages/home/home.component';
     HeaderComponent,
     CaretoryListComponent,
     ContainerComponent,
-    HomeComponent
+    HomeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
