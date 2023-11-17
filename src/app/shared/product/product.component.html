@@ -1,14 +1,14 @@
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title-group>
-      <mat-card-title>CALDO DE KENGA</mat-card-title>
-      <mat-card-subtitle class="mat-card-subtitle">Delicioso caldo de kenga (creme de macaxeira, bacon, calabresa, frango desfiado, coentro e especiarias da casa.)</mat-card-subtitle>
+      <mat-card-title>{{ product.name }}</mat-card-title>
+      <mat-card-subtitle class="mat-card-subtitle">{{ product.description }}</mat-card-subtitle>
       <div class="container">
-        <img mat-card-md-image class="image" src="https://zaun-test.s3.amazonaws.com/caldoDeKenga.jpeg"  alt="Imagem do caldo de kenga">
+        <img mat-card-md-image class="image" src="{{ product.imageUrl }}"  alt="Imagem do caldo de kenga">
       </div>
     </mat-card-title-group>
   </mat-card-header>
   <mat-card-content class="mat-card-content">
-    A partir de R$ 8,00
+    A partir de R$ {{ product.price }},00
   </mat-card-content>
 </mat-card>
