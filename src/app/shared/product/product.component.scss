@@ -8,13 +8,12 @@
 
 .container {
   border-radius: 10px;
-  width: 80%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   .image {
-    width: 100%;
+    width: 100px;
     height: auto;
     object-fit: cover;
     max-width: 200px;
@@ -39,7 +38,7 @@
     justify-content: flex-end;
 
     .image {
-      max-width: 200px;
+      width: 200px;
     }
   }
 }
@@ -48,6 +47,3 @@
   font-size: 18px;
   margin-top: 15px;
 }
-
-
-
