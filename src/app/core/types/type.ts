@@ -3,7 +3,8 @@ export interface Product {
   name: string,
   description: string,
   price: number,
-  imageUrl: string
+  imageUrl: string,
+  productType: ProductType;
 }
 
 export interface PaginatedResponse<T> {
@@ -12,3 +13,8 @@ export interface PaginatedResponse<T> {
   totalPages: number
 }
 
+export interface ProductType {
+  id: number,
+  type: string,
+  description: string
+}

@@ -1,3 +1,8 @@
-<div>
-  <app-product *ngFor="let item of products" [product]="item"></app-product>
+<div *ngFor="let type of productTypes">
+  <mat-card class="example-card">
+    <mat-card-content class="custom-card-content">{{ type.type }}</mat-card-content>
+  </mat-card>
+  <div *ngFor="let product of getProductsType(type.id)">
+    <app-product [product]="product"></app-product>
+  </div>
 </div>

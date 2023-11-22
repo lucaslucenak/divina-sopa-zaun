@@ -9,17 +9,15 @@
       <p class="message">A SOPA COM O GOSTINHO DE CASA</p>
     </div>
     <div class="navbar-links">
-      <a href="#" class="active" >DIVERSOS</a>
-      <a href="#">Sopas</a>
-      <a href="#" >Bebidas</a>
-      <a href="#" >Açaí</a>
+      <a href="#" *ngFor="let type of productTypes">  <!--  class="active" -->
+        {{ type.type }}
+      </a>
     </div>
   </div>
   <div class="navbar-right">
     <div class="search-icon" (click)="toggleSearch()">
       <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
     </div>
-
     <div class="search-bar" *ngIf="showSearchBar">
       <input type="text" placeholder="Buscar no cardápio" [(ngModel)]="searchTerm" autofocus>
       <button (click)="toggleSearch()">Cancelar</button>
