@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ElementRef  } from '@angular/core';
 import { ProductTypeService } from 'src/app/core/services/product-type.service';
 import { ProductType } from 'src/app/core/types/type';
 
@@ -12,9 +12,11 @@ export class HeaderComponent implements OnInit {
   showSearchBar = false;
   searchTerm: string = '';
   productTypes: ProductType[] = [];
+  isFixed: boolean = false;
 
   constructor(
-    private productTypeService: ProductTypeService
+    private productTypeService: ProductTypeService,
+    private el: ElementRef
   ) { }
 
   ngOnInit(): void {
@@ -29,10 +31,12 @@ export class HeaderComponent implements OnInit {
   //   this.sharedSelectionService.selectProductType(typeId);
   // }
 
-  @HostListener('window:scroll', [])
+  @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    const threshold = 100; // Exemplo de limite de rolagem para mudar a visibilidade
-    this.showHeaderInfo = (window.pageYOffset < threshold);
+    // const threshold = 100; // Exemplo de limite de rolagem para mudar a visibilidade
+    // this.showHeaderInfo = (window.pageYOffset < threshold);
+    const offset = window.pageYOffset || document.documentElement.scrollTop;
+    this.isFixed = offset > this.el.nativeElement.offsetTop;
   }
 
   toggleSearch(): void {
