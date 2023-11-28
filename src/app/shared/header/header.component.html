@@ -9,7 +9,7 @@
       <p class="message">A SOPA COM O GOSTINHO DE CASA</p>
     </div>
     <div class="navbar-links">
-      <a href="#" *ngFor="let type of productTypes">  <!--  class="active" -->
+      <a href="#" *ngFor="let type of productTypes" [class.active]="type.type === activeType" (click)="scrollToType($event, type.type)">
         {{ type.type }}
       </a>
     </div>

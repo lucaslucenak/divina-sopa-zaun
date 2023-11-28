@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   searchTerm: string = '';
   productTypes: ProductType[] = [];
   isFixed: boolean = false;
+  activeType: string = '';
 
   constructor(
     private productTypeService: ProductTypeService,
@@ -25,6 +26,10 @@ export class HeaderComponent implements OnInit {
         this.productTypes = response.content;
       }
     );
+
+    this.productTypeService.getActiveProductType().subscribe(activeType => {
+      this.activeType = activeType;
+    })
   }
 
   // selectProductType(typeId: number): void {
@@ -42,5 +47,13 @@ export class HeaderComponent implements OnInit {
   toggleSearch(): void {
     this.showSearchBar = !this.showSearchBar;
     // Lógica
+  }
+
+  scrollToType(event: MouseEvent, type: string): void {
+    event.preventDefault(); // Evita voltar a rolagem para o ínicio.
+    const section = document.getElementById(type);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

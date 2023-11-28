@@ -1,4 +1,4 @@
-<div *ngFor="let type of productTypes">
+<div *ngFor="let type of productTypes" id="{{ type.type }}">
   <mat-card class="example-card">
     <mat-card-content class="custom-card-content">{{ type.type }}</mat-card-content>
   </mat-card>
