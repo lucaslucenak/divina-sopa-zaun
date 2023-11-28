@@ -2,14 +2,14 @@
 
 </div>
 
-<nav class="navbar">
+<nav class="navbar" [class.navbar-fixed]="isFixed">
   <div class="navbar-container">
     <div class="navbar-logo">
       <p class="title">Divina Sopa</p>
       <p class="message">A SOPA COM O GOSTINHO DE CASA</p>
     </div>
     <div class="navbar-links">
-      <a href="#" *ngFor="let type of productTypes">  <!--  class="active" -->
+      <a href="#" *ngFor="let type of productTypes" [class.active]="type.type === activeType" (click)="scrollToType($event, type.type)">
         {{ type.type }}
       </a>
     </div>
