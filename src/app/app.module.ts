@@ -13,6 +13,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductComponent } from './shared/product/product.component';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailsComponent } from './shared/product-details/product-details.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     CaretoryListComponent,
     ContainerComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatIconModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
