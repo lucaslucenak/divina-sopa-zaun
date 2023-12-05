@@ -14,8 +14,13 @@ export class ProductComponent {
   constructor(public dialog: MatDialog) {}
 
   openProductDetails(): void {
+
+    let modalHeight = window.innerWidth > 768 ? '70%' : 'auto';
+    let modalWidth = window.innerWidth > 768 ? '20%' : '100%';
+
     this.dialog.open(ProductDetailsComponent, {
-      width: '250px',
+      width: modalWidth,
+      height: modalHeight,
       data: { product: this.product }
     })
   }
