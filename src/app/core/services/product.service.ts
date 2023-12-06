@@ -16,6 +16,6 @@ export class ProductService {
   ) { }
 
   listar(): Observable<PaginatedResponse<Product>> {
-    return this.httpCliente.get<PaginatedResponse<Product>>(`${this.apiUrl}/product`);
+    return this.httpCliente.get<PaginatedResponse<Product>>(`${this.apiUrl}/product/active`);
   }
 }
